@@ -1,7 +1,7 @@
 class NodeArvore {
     int valor;
-    NodeArvore noEsquerdo;
     NodeArvore noDireito;
+    NodeArvore noEsquerdo;    
 
     NodeArvore(int valor) {
         this.valor = valor;
@@ -48,14 +48,11 @@ public class IntervaloArvore {
         NodeArvore raiz = new NodeArvore(10);
         raiz.noEsquerdo = new NodeArvore(5);
         raiz.noEsquerdo.noEsquerdo = new NodeArvore(3);
-        raiz.noEsquerdo.noEsquerdo.noEsquerdo = new NodeArvore(1);
         raiz.noEsquerdo.noDireito = new NodeArvore(7);
-        raiz.noEsquerdo.noDireito.noEsquerdo = new NodeArvore(6);
         raiz.noDireito = new NodeArvore(15);
-        raiz.noDireito.noEsquerdo = new NodeArvore(13);
         raiz.noDireito.noDireito = new NodeArvore(18);
 
         IntervaloArvore arvore = new IntervaloArvore(raiz);
-        System.out.println(arvore.calcularSomaIntervalo(6, 10));
+        System.out.println(arvore.calcularSomaIntervalo(7, 15));
     }
 }
